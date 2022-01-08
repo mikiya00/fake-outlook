@@ -1,0 +1,36 @@
+  {
+    "manifest_version": 3,
+    "name": "Twitter-ISH",
+    "version": "1.0.0",
+    "description": "Looks like OutLook but this is Twitter",
+    
+    "permissions": ["scripting"],
+
+    "content_scripts": [{
+      "matches": ["http://*/*","https://*/*"],
+      "js": ["myscript.js"],
+      "css":["css.css"]
+    }],
+  
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*",
+      "*://*/*"
+    ],
+
+    "web_accessible_resources": [{  
+      "resources": ["pic/head.png"],
+      "matches": ["http://*/*","https://*/*"],
+      "extension_ids": []
+    }],
+
+    "action": {
+      "default_icon": "pic/outlookicon.png",
+      "default_title": "OutLock",
+      "default_popup": "visual.html"
+    }
+  }
+
+  
+  
+  
